@@ -2,7 +2,13 @@ node_modules
 .DS_Store
 /.cache
 /public
-package-lock.json
 yarn-error.log
 .env
 /.next
+.npmrc
+.env
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+stark-results.json
