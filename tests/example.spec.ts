@@ -2,8 +2,8 @@ import fs from "fs";
 import { expect, test } from "@playwright/test";
 import { StarkScan } from "@stark-ci/playwright";
 
-const FAIL_BUDGET = 1000;
-const CONTRAST_BUDGET = 1000;
+const FAIL_BUDGET = 11;
+const CONTRAST_BUDGET = 4;
 
 test("has title", async ({ page }) => {
   await page.goto("/");
