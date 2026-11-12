@@ -4,9 +4,6 @@ run-name: ${{ github.event.inputs.display-title }}
 on:
   workflow_dispatch:
     inputs:
-      token:
-        description: "Stark Token"
-        required: true
       display-title:
         description: "Display title"
         required: true
@@ -26,7 +23,7 @@ jobs:
         uses: stark-contrast/accessibility-check-action@3.1.0
         with:
           # Most of the following values are simply shell commands. You can use these to set up the container as needed for your app
-          token: ${{ github.event.inputs.token }} # The action will use this to send an audit report back to Stark.
+          token: ${{ secrets.STARK_PROJECT_TOKEN }} # The action will use this to send an audit report back to Stark.
           prebuild: ""
           setup: "npm i" # [Optional] Set up the container. Install some tools, export variables, etc.
           build: "npm run build" # [Optional] Build steps. Use && for multiple steps.

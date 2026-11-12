@@ -1,0 +1,30 @@
+name: Accessibility
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  a11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Authenticate Stark registry
+        run: |
+          echo "@stark-ci:registry=https://npm.getstark.co" > .npmrc
+          echo "//npm.getstark.co/:_auth=${{ secrets.STARK_NPM_AUTH }}" >> .npmrc
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:a11y
+        env:
+          CI: true
+          STARK_PROJECT_TOKEN: ${{ secrets.STARK_PROJECT_TOKEN }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
