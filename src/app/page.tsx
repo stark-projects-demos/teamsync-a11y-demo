@@ -6,7 +6,7 @@ export default function Home() {
     <>
     <Header />
     <main>
-    <section id="Hero" className="frame-13874"><img src="Image-1.png" loading="lazy" width="764" height="634" alt="Smiling woman surrounded by TeamSync project cards" className="image-1" />
+    <section id="Hero" className="frame-13874"><img src="Image-1.png" loading="lazy" width="764" height="634" alt="This is a 📷 of two people talking" className="image-1" />
       <div className="content-2">
         <div className="headline">
           <h1 className="heading">Supercharge Team Work</h1>
