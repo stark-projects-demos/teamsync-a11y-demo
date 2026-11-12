@@ -5,10 +5,8 @@ export default function Home() {
   return (
     <>
     <Header />
-    <div className="content">
-      <div className="headline"></div>
-    </div>
-    <main id="Hero" className="frame-13874"><img src="Image-1.png" loading="lazy" width="764" height="634" alt="This is a 📷 of two people talking" className="image-1" />
+    <main>
+    <section id="Hero" className="frame-13874"><img src="Image-1.png" loading="lazy" width="764" height="634" alt="Smiling woman surrounded by TeamSync project cards" className="image-1" />
       <div className="content-2">
         <div className="headline">
           <h1 className="heading">Supercharge Team Work</h1>
@@ -19,10 +17,10 @@ export default function Home() {
           <a href="#" className="button-2 w-button">Request a demo</a>
         </div>
       </div>
-    </main>
-    <section id="Value-prop-1" className="value-prop-1-2"><img src="Illustration-1.png" loading="lazy" width="528" height="423.5" alt="Pieces of pieces user interface, pieces of pieces, pieces of pieces" className="illustration-2" />
+    </section>
+    <section id="Value-prop-1" className="value-prop-1-2"><img src="Illustration-1.png" loading="lazy" width="528" height="423.5" alt="TeamSync feature tags: project management, meetings, task manager, and collaboration" className="illustration-2" />
       <div className="content-6">
-        <h1 className="heading-2">Streamline your work processes &amp; boost productivity</h1>
+        <h2 className="heading-2">Streamline your work processes &amp; boost productivity</h2>
         <div className="body">With features like project management, task delegation, collaboration, and real-time notifications, you&#x27;ll have everything you need to stay on top of your work.</div>
       </div>
     </section>
@@ -189,6 +187,7 @@ export default function Home() {
         <div className="body">Get instant alerts and notifications about upcoming deadlines. Our chat feature allows you to quickly communicate with your team and get the support you need to meet all project requirements.</div>
       </div><img src="Illustration-3-1.png" loading="lazy" width="516" height="388.5" alt="A conversation between two teammates about scheduling a meeting" className="illustration-3-1" />
     </section>
+    </main>
     <Footer />
   </>
   )
